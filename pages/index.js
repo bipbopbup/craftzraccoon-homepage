@@ -40,7 +40,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
           Lucas Marco
 	  </Heading>
-          <p>Digital Craftsman ( Machine Learning Enthusiast / Developer / Cyber-security nerd )</p>
+          <p>Digital Craftsman ( Developer / Cyber-security Nerd / Machine Learning Enthusiast )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -55,7 +55,7 @@ const Home = () => (
             maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/takuya.jpg"
+            src="/images/lucas.jpg"
             alt="Profile image"
           />
         </Box>
@@ -66,11 +66,11 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Lucas is a software engineer studen and a developer based in Madrid with a
-          passion for building and understanding software. He has a knack
-          for Machine Learning and Cybersecurity, and he loves training his Red Team skills in HackTheBox
-	  and other CTF websites. When not online, he loves painting with watercolors, repairing old laptopts
-	  and cooking authentic chinese food.
+          I&apos;m Lucas, a Software Engineer  and a developer based in Madrid with a
+          passion for building and understanding software. My favourite computer science fields are
+          Machine Learning and Cybersecurity, which skills I love training in HackTheBox
+	  and other CTF websites. When not online, I love painting with watercolors, messing with old retro 
+	  hardware and cooking authentic chinese food.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
@@ -86,22 +86,21 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>1997</BioYear>
+          Born in Madrid, Spain.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2019</BioYear>
+        Worked at Undergraf S.L. as a Front-End and Java Developer
+	</BioSection>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Worked at Catenon S.A. as an Information Technology Trainee.
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>2021 to present</BioYear>
+          This is my last year as a student! I&apos;m currently developing my end-of-degree project,
+	  which involves Convolutional Neural Networks for improving image quality.
         </BioSection>
       </Section>
 
@@ -111,14 +110,10 @@ const Home = () => (
         </Heading>
         <Paragraph>
           Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
+          <Link href="https://www.instagram.com/muerteokulta/" target="_blank">
             Drawing
           </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+          , Machine Learning, CTF exercises
         </Paragraph>
       </Section>
 
@@ -145,7 +140,7 @@ const Home = () => (
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
-                @craftzdog
+                @MuerteOkulta
               </Button>
             </Link>
           </ListItem>

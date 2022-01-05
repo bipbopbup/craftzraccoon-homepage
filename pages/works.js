@@ -3,8 +3,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
+import thumbInkdrop from '../public/images/works/chuchinator.jpg'
+import thumbWalknote from '../public/images/works/ml-lasso.jpg'
 import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
 import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
 import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
@@ -22,36 +22,36 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-            A Markdown note-taking app with 100+ plugins, cross-platform and
-            encrypted data sync support
+          <WorkGridItem id="chuchinator" title="Chuchinator" thumbnail={thumbInkdrop}>
+            A Convolutional Neural Network which classifies two cats (Chuchi and Ronnie)
+	    with data augmentation given an image.
           </WorkGridItem>
         </Section>
         <Section>
           <WorkGridItem
-            id="walknote"
-            title="walknote"
+            id="lasso"
+            title="Healthcare Cost Estimator"
             thumbnail={thumbWalknote}
           >
-            Music recommendation app for iOS
+            A Machine Learning predictor for healthcare total cost with high accuracy... 
+	    using, Lasso, a Linear Model! This proves that with a smart data preprocessing you
+	    can achieve great results with low computational cost.
           </WorkGridItem>
         </Section>
-
+	
         <Section delay={0.1}>
           <WorkGridItem
             id="fourpainters"
-            title="The four painters"
+            title="Coming soon..."
             thumbnail={thumbFourPainters}
           >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
-          </WorkGridItem>
+          Coming soon...
+	</WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
-          </WorkGridItem>
+          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Coming soon...">
+          Coming soon...
+	</WorkGridItem>
         </Section>
       </SimpleGrid>
 
@@ -68,14 +68,14 @@ const Works = () => (
           <WorkGridItem
             id="modetokyo"
             thumbnail={thumbModeTokyo}
-            title="mode.tokyo"
+            title="Coming soon..."
           >
-            The mode magazine for understanding to personally enjoy Japan
+            Coming soon...
           </WorkGridItem>
         </Section>
         <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
-            A VR Creative tools for fashion brands
+          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Coming soon...">
+            Coming soon...
           </WorkGridItem>
         </Section>
       </SimpleGrid>
@@ -87,29 +87,29 @@ const Works = () => (
           Old works
         </Heading>
       </Section>
-
+	
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Pichu*Pichu">
-            Twitter client app for iPhone Safari
+          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Coming soon...">
+            Coming soon...
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>
           <WorkGridItem
             id="freedbtagger"
             thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
+            title="Coming soon..."
           >
-            Automatic audio file tagging tool using FreeDB for Windows
+            Coming soon...
           </WorkGridItem>
         </Section>
         <Section delay={0.6}>
-          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Amembo">
-            P2P private file sharing tool with MSN Messenger integration for
-            Windows
+          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Coming soon...">
+            Coming soon...
           </WorkGridItem>
         </Section>
       </SimpleGrid>
+      
     </Container>
   </Layout>
 )
