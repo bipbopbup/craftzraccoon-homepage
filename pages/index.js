@@ -17,7 +17,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
+//import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
@@ -100,11 +100,11 @@ const Home = () => (
         <BioSection>
           <BioYear>2021 to present</BioYear>
           This is my last year as a student! I&apos;m currently developing my end-of-degree project,
-	  which involves Super Resolution Convolutional Neural Networks for improving image quality.
+	  which involves Super ResiRConvolutional Neural Networks for improving image quality.
         </BioSection>
       </Section>
 
-      <Section delay={0.3}>
+dssfsdf      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
