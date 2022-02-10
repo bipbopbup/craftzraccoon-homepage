@@ -68,7 +68,7 @@ const Home = () => (
         <Paragraph>
           I&apos;m Lucas, a Software Engineer  and a developer based in Madrid with a
           passion for building and understanding software. My favourite computer science fields are
-          Machine Learning and Cybersecurity, which skills I love training in HackTheBox
+          Machine Learning and Cybersecurity, so I spend my free time training in HackTheBox
 	  and other CTF websites. When not online, I love painting with watercolors, messing with old retro 
 	  hardware and cooking authentic chinese food.
         </Paragraph>
@@ -100,7 +100,7 @@ const Home = () => (
         <BioSection>
           <BioYear>2021 to present</BioYear>
           This is my last year as a student! I&apos;m currently developing my end-of-degree project,
-	  which involves Convolutional Neural Networks for improving image quality.
+	  which involves Super Resolution Convolutional Neural Networks for improving image quality.
         </BioSection>
       </Section>
 
