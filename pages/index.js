@@ -5,7 +5,6 @@ import {
   Heading,
   Box,
   Image,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -17,7 +16,10 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { GridItem } from '../components/grid-item'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import thumbYouTube from '../public/images/links/youtube.png'
+import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 
 const Home = () => (
   <Layout>
@@ -101,7 +103,7 @@ const Home = () => (
         </BioSection>
       </Section>
 
-      <Section delay={0.3}>
+dssfsdf      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
@@ -109,9 +111,6 @@ const Home = () => (
           Art, Music,{' '}
           <Link href="https://www.instagram.com/muerteokulta/" target="_blank">
             Drawing
-      </Section>
-
-      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           On the web
         </Heading>
@@ -152,6 +151,9 @@ const Home = () => (
 )
 
 export default Home
+import NextLink from 'next/link'
+import {
+  Link,
 import NextLink from 'next/link'
 import {
   Link,
