@@ -2,6 +2,7 @@ import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
+import { PostGridItem } from '../components/grid-item'
 
 import thumbFishWorkflow from '../public/images/contents/youtube-fish-workflow.jpg'
 import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jpg'
@@ -19,11 +20,15 @@ const Posts = () => (
 
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="Coming soon..."
+
+          <PostGridItem
+            id="htb_1"
+            title="Hack The Box Writeup"
             thumbnail={thumbFishWorkflow}
-            href=""
-          />
+          >
+          Lorem Ipsum
+          </PostGridItem>
+
           <GridItem
             title="Coming soon..."
             thumbnail={thumbMyDeskSetup}
