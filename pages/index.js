@@ -5,7 +5,6 @@ import {
   Heading,
   Box,
   Image,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -17,10 +16,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 
 const Home = () => (
   <Layout>
@@ -100,7 +96,7 @@ const Home = () => (
         <BioSection>
           <BioYear>2021 to present</BioYear>
           This is my last year as a student! I&apos;m currently developing my end-of-degree project,
-	  which involves Super ResiRConvolutional Neural Networks for improving image quality.
+	  which involves Super Resolution Convolutional Neural Networks for improving image quality.
         </BioSection>
       </Section>
 
@@ -113,6 +109,11 @@ const Home = () => (
           <Link href="https://www.instagram.com/muerteokulta/" target="_blank">
             Drawing
           </Link>
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
           On the web
         </Heading>
         <List>
@@ -152,10 +153,4 @@ const Home = () => (
 )
 
 export default Home
-import NextLink from 'next/link'
-import {
-  Link,
-import NextLink from 'next/link'
-import {
-  Link,
-import NextLink from 'next/link'
+export { getServerSideProps } from '../components/chakra'
