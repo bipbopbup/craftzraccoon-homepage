@@ -101,7 +101,7 @@ const Home = () => (
         </BioSection>
       </Section>
 
-dssfsdf      <Section delay={0.3}>
+      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
@@ -109,9 +109,6 @@ dssfsdf      <Section delay={0.3}>
           Art, Music,{' '}
           <Link href="https://www.instagram.com/muerteokulta/" target="_blank">
             Drawing
-          </Link>
-          , Machine Learning, CTF exercises
-        </Paragraph>
       </Section>
 
       <Section delay={0.3}>
@@ -155,3 +152,6 @@ dssfsdf      <Section delay={0.3}>
 )
 
 export default Home
+import NextLink from 'next/link'
+import {
+  Link,
