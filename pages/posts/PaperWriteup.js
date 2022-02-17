@@ -18,7 +18,7 @@ const Post = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://www.hackthebox.com/machines/Paper">
+          <Link href="https://app.hackthebox.com/machines/Paper">
             https://www.hackthebox.com/machines/Paper <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
