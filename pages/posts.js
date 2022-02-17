@@ -4,7 +4,7 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { PostGridItem } from '../components/grid-item'
 
-import thumbFishWorkflow from '../public/images/contents/youtube-fish-workflow.jpg'
+import thumbPaperWriteup from '../public/images/posts/Paperlogo.png'
 import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jpg'
 import thumb500PaidUsers from '../public/images/contents/blog-500-paid-users.jpg'
 import thumbFinancialGoal from '../public/images/contents/blog-financial-goal.png'
@@ -22,11 +22,11 @@ const Posts = () => (
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
 
           <PostGridItem
-            id="htb_1"
-            title="Hack The Box Writeup"
-            thumbnail={thumbFishWorkflow}
+            id="PaperWriteup"
+            title="Hack The Box - Paper Writeup"
+            thumbnail={thumbPaperWriteup}
           >
-          Lorem Ipsum
+          My approach to Paper machine.
           </PostGridItem>
 
           <GridItem
