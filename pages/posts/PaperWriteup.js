@@ -44,7 +44,7 @@ const Post = () => (
 	<WorkImage src="/images/posts/Paper/Paper1.png" alt="PaperNmap" />
 	<WorkImage src="/images/posts/Paper/Paper11.png" alt="PapercurlIL" />
 	<P> As we can see, the back-end server is called office.paper. Browsing into 10.10.11.143 doesn&apos;t provide us with much info
-	so we will add the line "10.10.11.143 office.paper" to our /etc/hosts file. Now we can navigate to office.paper and continue
+	so we will add the line &quot;10.10.11.143 office.paper&quot; to our /etc/hosts file. Now we can navigate to office.paper and continue
 	our investigation. Soon we will find our first clues:</P>
 	<WorkImage src="/images/posts/Paper/Paper2.png" alt="PaperClue" />
 	<P>Fuzzing directories and subdomains of 10.10.11.143 doesn&apos;t work, so we will try the same for the domain we just
@@ -60,13 +60,13 @@ const Post = () => (
 	<P>Googling the issue reveals the next Wordpress 5.2.3 vulnerability: </P>
 	<Link href="https://wpscan.com/vulnerability/3413b879-785f-4c9f-aa8a-5a4a1d5e0ba2"> https://wpscan.com/vulnerability/3413b879-785f-4c9f-aa8a-5a4a1d5e0ba2
 	<ExternalLinkIcon mx="2px"/></Link>
-	<P>So navigating to office.paper/?static=1 reveal us some messages with a "Secret Registration URL" :D </P>
+	<P>So navigating to office.paper/?static=1 reveal us some messages with a &quot;Secret Registration URL&quot; :D </P>
 	<WorkImage src="/images/posts/Paper/Paper6.png" alt="PaperRegistrationLink" />
 	
 	<P>After signing up to the chat link, we can access it and talk to the Recyclops bot, which is our main objective here. We will soon realize that this
-	bot allows us to execute commands from a chat, like list (ls) and file (cat). This way we can trick the bot doing things like "recyclops file ../../somesecret.js"
+	bot allows us to execute commands from a chat, like list (ls) and file (cat). This way we can trick the bot doing things like &quot;recyclops file ../../somesecret.js&quot;
 	to access some interesting files and learning more about this bot looking into its code, which will be reported to us in the chat. After a while we can learn that
-	it is possible to execute almost every command using "recyclops run ..." so we can throw a reverse shell.</P>
+	it is possible to execute almost every command using &quot;recyclops run ...&quot; so we can throw a reverse shell.</P>
 	<P>Once you are in the reverse shell, it would be nice to upgrade it to a proper console. I&apos;ve used the following method:</P>
 	<WorkImage src="/images/posts/Paper/Paper7.png" alt="PaperUpgradeShell" />
 	<P>We can quickly cat the user flag, which is in the user directory. Now let&apos;s root this machine!</P>
