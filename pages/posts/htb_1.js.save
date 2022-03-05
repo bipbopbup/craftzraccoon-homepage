@@ -1,0 +1,45 @@
+import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { Title, WorkImage, Meta } from '../../components/post'
+import P from '../../components/paragraph'
+import Layout from '../../components/layouts/article'
+
+const Post = () => (
+  <Layout title="Paper Machine Writeup">
+    <Container>
+      <Title>
+        Paper Machine Writeup <Badge>2022</Badge>
+      </Title>
+      <P>
+      This easy machine provided by Hack The Box is an extremely fun and enjoyable one. It will
+	test you on basic linux pentesting skills aswell as make you laugh if you are familiar with 
+	The Office, a highly recommended TV show. Oh, and this is my first writeup too!
+      </P>
+      <List ml={4} my={4}>
+        <ListItem>
+          <Meta>Website</Meta>
+          <Link href="https://www.hackthebox.com/machines/Paper">
+            https://www.hackthebox.com/machines/Paper <ExternalLinkIcon mx="2px" />
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Meta>Platform</Meta>
+          <span>Hack The Box</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Skills</Meta>
+          <span> Directory and Subdomains fuzzing, Reverse Shells, Privilege Escalation</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Difficulty</Meta>
+          <span> 4/10 </span>
+        </ListItem>
+      </List>
+
+      <WorkImage src="/images/posts/Paperlogo.png" alt="Paperlogo" />
+      
+    </Container>
+  </Layout>
+)
+
+export default Post
