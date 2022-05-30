@@ -142,7 +142,7 @@ const Home = () => (
 	  <ListItem>
 		<Link href="https://twitter.com/L_Marco_" target="_blank">
 		 <Button
-		  variante="ghost"
+		  variant="ghost"
 		  colorScheme="teal"
 		  leftIcon={<Icon as={IoLogoTwitter} />}
 		>
