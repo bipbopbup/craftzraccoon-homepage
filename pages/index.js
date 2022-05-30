@@ -139,6 +139,15 @@ const Home = () => (
               </Button>
             </Link>
           </ListItem>
+	  <ListItem>
+		<Link href="https://twitter.com/L_Marco_" target="_blank">
+		 <Button
+		  variante="ghost"
+		  colorScheme="teal"
+		  leftIcon={<Icon as={IoLogoTwitter} />}
+		>
+		  @L_Marco_
+	  </ListItem>
         </List>
         <Box align="center" my={4}>
           <NextLink href="/posts">
