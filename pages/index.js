@@ -16,7 +16,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoInstagram, IoLogoGithub, IoLogoTwitter } from 'react-icons/io5'
 
 const Home = () => (
   <Layout>
@@ -147,6 +147,8 @@ const Home = () => (
 		  leftIcon={<Icon as={IoLogoTwitter} />}
 		>
 		  @L_Marco_
+		 </Button>
+		</Link>
 	  </ListItem>
         </List>
         <Box align="center" my={4}>
