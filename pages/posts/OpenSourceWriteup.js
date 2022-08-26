@@ -51,13 +51,13 @@ const Post = () => (
 	<P> A /shell and /console. First doesn&apos;t work, second is pin protected. Subdomain fuzzing with gobuster dns -d 10.10.11.164 -w /your/path/to/wordlist.txt  
 	doesn&apos;t provide anything useful. But... there is a git file in the code we downloaded! git log --raw shows us that there could be a useful commit, which we will inspect with
 	git diff ee9d9f1ef9156c787d53074493e39ae364cd1e05:Dockerfile HEAD:Dockerfile
-	We can see that code line "ENV FLASK_DEBUG=1" was deleted. Changes made to a file without the debug mode won&apos;t be automatically updated in Flask. This could be useful later.
+	We can see that code line &quot;ENV FLASK_DEBUG=1&quot; was deleted. Changes made to a file without the debug mode won&apos;t be automatically updated in Flask. This could be useful later.
 	We also notice a git branch dev which contains various commits, one of them including an user an a password: dev01:Soulless_Developer#2022
 	</P>
 	<WorkImage src="/images/posts/OpenSource/git-dockerfile.png" alt="git-dockerfile" />
 	<P>Another interesting thing in the sourcecode is this:</P>
 	<WorkImage src="/images/posts/OpenSource/filename-secure-version.png" alt="filename-secure-version" />
-	<P>It seems that it will replace "../" with nothing in the file name we upload. Let&apos;s click on the "Take me there!" button. It really get us to 10.10.11.164/upclouds. Impressive. I&apos;m joking.
+	<P>It seems that it will replace &quot;../&quot; with nothing in the file name we upload. Let&apos;s click on the "Take me there!" button. It really get us to 10.10.11.164/upclouds. Impressive. I&apos;m joking.
 	We can now try to do something with burpsuite. We click on the upload button with intercept mode activated in burpsuite and change the filename with
 	something like ..//..//..//..//etc/passwd but URL encoded, so we can try to download the passwd file. Forwarding this code it will provide us, indeed, with this file.
 	 </P>
