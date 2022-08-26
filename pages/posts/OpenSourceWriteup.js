@@ -57,7 +57,7 @@ const Post = () => (
 	<WorkImage src="/images/posts/OpenSource/git-dockerfile.png" alt="git-dockerfile" />
 	<P>Another interesting thing in the sourcecode is this:</P>
 	<WorkImage src="/images/posts/OpenSource/filename-secure-version.png" alt="filename-secure-version" />
-	<P>It seems that it will replace &quot;../&quot; with nothing in the file name we upload. Let&apos;s click on the "Take me there!" button. It really get us to 10.10.11.164/upclouds. Impressive. I&apos;m joking.
+	<P>It seems that it will replace &quot;../&quot; with nothing in the file name we upload. Let&apos;s click on the &quot;Take me there!&quot; button. It really get us to 10.10.11.164/upclouds. Impressive. I&apos;m joking.
 	We can now try to do something with burpsuite. We click on the upload button with intercept mode activated in burpsuite and change the filename with
 	something like ..//..//..//..//etc/passwd but URL encoded, so we can try to download the passwd file. Forwarding this code it will provide us, indeed, with this file.
 	 </P>
