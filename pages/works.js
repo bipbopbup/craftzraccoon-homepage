@@ -3,14 +3,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbInkdrop from '../public/images/works/chuchinator.jpg'
-import thumbWalknote from '../public/images/works/ml-lasso.jpg'
-import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
-import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
-import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
+import thumbChuchinator from '../public/images/works/chuchinator.jpg'
+import thumbMLasso from '../public/images/works/ml-lasso.jpg'
 import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 
 const Works = () => (
@@ -22,7 +16,7 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="chuchinator" title="Chuchinator" thumbnail={thumbInkdrop}>
+          <WorkGridItem id="chuchinator" title="Chuchinator" thumbnail={thumbChuchinator}>
             A Convolutional Neural Network which classifies two cats (Chuchi and Ronnie)
 	    with data augmentation given an image.
           </WorkGridItem>
@@ -31,7 +25,7 @@ const Works = () => (
           <WorkGridItem
             id="lasso"
             title="Healthcare Cost Estimator"
-            thumbnail={thumbWalknote}
+            thumbnail={thumbMLasso}
           >
             A Machine Learning predictor for healthcare total cost with high accuracy... 
 	    using, Lasso, a Linear Model! This proves that with a smart data preprocessing you
@@ -43,13 +37,13 @@ const Works = () => (
           <WorkGridItem
             id="fourpainters"
             title="Coming soon..."
-            thumbnail={thumbFourPainters}
+            thumbnail={thumbAmembo}
           >
           Coming soon...
 	</WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Coming soon...">
+          <WorkGridItem id="menkiki" thumbnail={thumbAmembo} title="Coming soon...">
           Coming soon...
 	</WorkGridItem>
         </Section>
@@ -67,14 +61,14 @@ const Works = () => (
         <Section delay={0.3}>
           <WorkGridItem
             id="modetokyo"
-            thumbnail={thumbModeTokyo}
+            thumbnail={thumbAmembo}
             title="Coming soon..."
           >
             Coming soon...
           </WorkGridItem>
         </Section>
         <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Coming soon...">
+          <WorkGridItem id="styly" thumbnail={thumbAmembo} title="Coming soon...">
             Coming soon...
           </WorkGridItem>
         </Section>
@@ -90,14 +84,14 @@ const Works = () => (
 	
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Coming soon...">
+          <WorkGridItem id="pichu2" thumbnail={thumbAmembo} title="Coming soon...">
             Coming soon...
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>
           <WorkGridItem
             id="freedbtagger"
-            thumbnail={thumbFreeDBTagger}
+            thumbnail={thumbAmembo}
             title="Coming soon..."
           >
             Coming soon...

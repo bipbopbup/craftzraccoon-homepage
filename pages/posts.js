@@ -5,11 +5,8 @@ import { GridItem } from '../components/grid-item'
 import { PostGridItem } from '../components/grid-item'
 
 import thumbPaperWriteup from '../public/images/posts/Paperlogo.png'
-import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jpg'
-import thumb500PaidUsers from '../public/images/contents/blog-500-paid-users.jpg'
-import thumbFinancialGoal from '../public/images/contents/blog-financial-goal.png'
-import thumbHowToPriceYourself from '../public/images/contents/blog-how-to-price-yourself.jpg'
-import thumb50xFaster from '../public/images/contents/youtube-50x-faster.jpg'
+import thumbOpenSource from '../public/images/posts/OpenSourcelogo.jpeg'
+import thumbHTBlogo from '../public/images/posts/hacktheboxlogo.png'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -26,14 +23,15 @@ const Posts = () => (
             title="Hack The Box - Paper Writeup"
             thumbnail={thumbPaperWriteup}
           >
-          My approach to Paper machine.
           </PostGridItem>
 
-          <GridItem
-            title="Coming soon..."
-            thumbnail={thumbMyDeskSetup}
-            href=""
-          />
+          <PostGridItem
+            id='OpenSourceWriteup'
+            title="Hack The Box - OpenSource Writeup"
+            thumbnail={thumbOpenSource}
+          >
+          </PostGridItem>
+
         </SimpleGrid>
       </Section>
 
@@ -41,12 +39,12 @@ const Posts = () => (
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             title="Coming soon..."
-            thumbnail={thumb500PaidUsers}
+            thumbnail={thumbHTBlogo}
             href=""
           />
           <GridItem
             title="Coming soon..."
-            thumbnail={thumbFinancialGoal}
+            thumbnail={thumbHTBlogo}
             href=""
           />
         </SimpleGrid>
@@ -56,12 +54,12 @@ const Posts = () => (
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             title="Coming soon..."
-            thumbnail={thumbHowToPriceYourself}
+            thumbnail={thumbHTBlogo}
             href=""
           />
           <GridItem
             title="Coming soon..."
-            thumbnail={thumb50xFaster}
+            thumbnail={thumbHTBlogo}
             href=""
           />
         </SimpleGrid>
