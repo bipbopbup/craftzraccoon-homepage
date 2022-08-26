@@ -95,8 +95,9 @@ const Home = () => (
         </BioSection>
         <BioSection>
           <BioYear>2021 to present</BioYear>
-          This is my last year as a student! I&apos;m currently developing my end-of-degree project,
-	  which involves Super Resolution Convolutional Neural Networks for improving image quality.
+          Currently searching for a job in the Cybersecurity industry! I just finished my end-of-degree project,
+	  which involves Super Resolution Convolutional Neural Networks for improving image quality,
+    and with it my Software Engineering degree.
         </BioSection>
       </Section>
 
