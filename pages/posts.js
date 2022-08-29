@@ -7,6 +7,7 @@ import { PostGridItem } from '../components/grid-item'
 import thumbPaperWriteup from '../public/images/posts/Paperlogo.png'
 import thumbOpenSource from '../public/images/posts/OpenSourcelogo.jpeg'
 import thumbHTBlogo from '../public/images/posts/hacktheboxlogo.png'
+import thumbShared from '../public/images/posts/Sharedlogo.png'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -17,14 +18,12 @@ const Posts = () => (
 
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-
           <PostGridItem
-            id="PaperWriteup"
-            title="Hack The Box - Paper Writeup"
-            thumbnail={thumbPaperWriteup}
+            id="SharedWriteup"
+            title="Hack The Box - Shared Writeup"
+            thumbnail={thumbShared}
           >
           </PostGridItem>
-
           <PostGridItem
             id='OpenSourceWriteup'
             title="Hack The Box - OpenSource Writeup"
@@ -37,11 +36,12 @@ const Posts = () => (
 
       <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title="Coming soon..."
-            thumbnail={thumbHTBlogo}
-            href=""
-          />
+        <PostGridItem
+            id="PaperWriteup"
+            title="Hack The Box - Paper Writeup"
+            thumbnail={thumbPaperWriteup}
+          >
+          </PostGridItem>
           <GridItem
             title="Coming soon..."
             thumbnail={thumbHTBlogo}

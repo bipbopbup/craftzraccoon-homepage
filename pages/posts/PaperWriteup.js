@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
+import { Container, Badge, Link, List, ListItem, Code } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/post'
 import P from '../../components/paragraph'
@@ -39,7 +39,7 @@ const Post = () => (
       <WorkImage src="/images/posts/Paperlogo.png" alt="Paperlogo" />
       <P>
 	First we ping the target IP to check the connection and then we nmap the target.
-	We will also type curl -IL 10.10.11.143 to extract some basic information. 
+	We will also type <Code>curl -IL 10.10.11.143</Code> to extract some basic information. 
 	</P>
 	<WorkImage src="/images/posts/Paper/Paper1.png" alt="PaperNmap" />
 	<WorkImage src="/images/posts/Paper/Paper11.png" alt="PapercurlIL" />
@@ -64,9 +64,9 @@ const Post = () => (
 	<WorkImage src="/images/posts/Paper/Paper6.png" alt="PaperRegistrationLink" />
 	
 	<P>After signing up to the chat link, we can access it and talk to the Recyclops bot, which is our main objective here. We will soon realize that this
-	bot allows us to execute commands from a chat, like list (ls) and file (cat). This way we can trick the bot doing things like &quot;recyclops file ../../somesecret.js&quot;
+	bot allows us to execute commands from a chat, like list (ls) and file (cat). This way we can trick the bot doing things like <Code>recyclops file ../../somesecret.js</Code>
 	to access some interesting files and learning more about this bot looking into its code, which will be reported to us in the chat. After a while we can learn that
-	it is possible to execute almost every command using &quot;recyclops run ...&quot; so we can throw a reverse shell.</P>
+	it is possible to execute almost every command using <Code>recyclops run</Code> so we can throw a reverse shell.</P>
 	<P>Once you are in the reverse shell, it would be nice to upgrade it to a proper console. I&apos;ve used the following method:</P>
 	<WorkImage src="/images/posts/Paper/Paper7.png" alt="PaperUpgradeShell" />
 	<P>We can quickly cat the user flag, which is in the user directory. Now let&apos;s root this machine!</P>
