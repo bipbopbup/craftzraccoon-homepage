@@ -20,7 +20,7 @@ const Posts = () => (
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <PostGridItem
             id="SharedWriteup"
-            title="Hack The Box - Shared Writeup"
+            title="Coming soon..."
             thumbnail={thumbShared}
           >
           </PostGridItem>
