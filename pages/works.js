@@ -35,7 +35,7 @@ const Works = () => (
 	
         <Section delay={0.1}>
           <WorkGridItem
-            id="fourpainters"
+            //id="fourpainters"
             title="Coming soon..."
             thumbnail={thumbAmembo}
           >
@@ -43,67 +43,13 @@ const Works = () => (
 	</WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbAmembo} title="Coming soon...">
+          <WorkGridItem //id="menkiki"
+          thumbnail={thumbAmembo} title="Coming soon...">
           Coming soon...
 	</WorkGridItem>
         </Section>
       </SimpleGrid>
 
-      <Section delay={0.2}>
-        <Divider my={6} />
-
-        <Heading as="h3" fontSize={20} mb={4}>
-          Collaborations
-        </Heading>
-      </Section>
-
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.3}>
-          <WorkGridItem
-            id="modetokyo"
-            thumbnail={thumbAmembo}
-            title="Coming soon..."
-          >
-            Coming soon...
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbAmembo} title="Coming soon...">
-            Coming soon...
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid>
-
-      <Section delay={0.4}>
-        <Divider my={6} />
-
-        <Heading as="h3" fontSize={20} mb={4}>
-          Old works
-        </Heading>
-      </Section>
-	
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbAmembo} title="Coming soon...">
-            Coming soon...
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.5}>
-          <WorkGridItem
-            id="freedbtagger"
-            thumbnail={thumbAmembo}
-            title="Coming soon..."
-          >
-            Coming soon...
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.6}>
-          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Coming soon...">
-            Coming soon...
-          </WorkGridItem>
-        </Section>
-      </SimpleGrid>
-      
     </Container>
   </Layout>
 )
