@@ -94,8 +94,8 @@ const Home = () => (
           Worked at Catenon S.A. as an Information Technology Trainee.
         </BioSection>
         <BioSection>
-          <BioYear>2021 to present</BioYear>
-          Currently searching for a job in the Cybersecurity industry! I just finished my end-of-degree project,
+          <BioYear>2022 to present</BioYear>
+          Currently working in DEKRA TESTING & CERTIFICATION as a full-time Pentester! I also just finished my end-of-degree project,
 	  which involves Super Resolution Convolutional Neural Networks for improving image quality,
     and with it my Software Engineering degree.
         </BioSection>

@@ -8,6 +8,7 @@ import thumbPaperWriteup from '../public/images/posts/Paperlogo.png'
 import thumbOpenSource from '../public/images/posts/OpenSourcelogo.jpeg'
 import thumbHTBlogo from '../public/images/posts/hacktheboxlogo.png'
 import thumbShared from '../public/images/posts/Sharedlogo.png'
+import thumbFaculty from '../public/images/posts/Faculty.png'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -19,15 +20,16 @@ const Posts = () => (
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <PostGridItem
+            id="FacultyWriteup"
+            title="Hack The Box - Faculty Writeup"
+            thumbnail={thumbFaculty}
+          >
+          </PostGridItem>
+
+          <PostGridItem
             id="SharedWriteup"
             title="Hack The Box - Shared Writeup"
             thumbnail={thumbShared}
-          >
-          </PostGridItem>
-          <PostGridItem
-            id='OpenSourceWriteup'
-            title="Hack The Box - OpenSource Writeup"
-            thumbnail={thumbOpenSource}
           >
           </PostGridItem>
 
@@ -37,16 +39,17 @@ const Posts = () => (
       <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
         <PostGridItem
+            id='OpenSourceWriteup'
+            title="Hack The Box - OpenSource Writeup"
+            thumbnail={thumbOpenSource}
+          >
+          </PostGridItem>
+        <PostGridItem
             id="PaperWriteup"
             title="Hack The Box - Paper Writeup"
             thumbnail={thumbPaperWriteup}
           >
           </PostGridItem>
-          <GridItem
-            title="Coming soon..."
-            thumbnail={thumbHTBlogo}
-            href=""
-          />
         </SimpleGrid>
       </Section>
 
