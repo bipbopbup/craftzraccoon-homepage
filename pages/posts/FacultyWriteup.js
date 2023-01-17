@@ -41,7 +41,7 @@ const Post = () => (
     <WorkImage src="/images/posts/Faculty/2.png" alt="recon"/>
     <WorkImage src="/images/posts/Faculty/1.png" alt="web"/>
     <P>Now we navigate to the admin directory and perform a simple SQL injection as follows:</P>
-    <Code>admin' or 1=1-- -</Code>
+    <Code>admin&apos; or 1=1-- -</Code>
     <P>Once inside, we will find in Users an &quot;admin&quot; username and a bunch of emails and names in &quot;Faculty List&quot;. I tried to SQL injection this page through PHPSESSID cookie but it did&apos;t work.</P>
     <WorkImage src="/images/posts/Faculty/3.png" alt="sql_injection_cookie"/>
     <P>Now we need to re-evaluate our options. Let&apos;s download that pdf from admin page and check what is mpdf exactly.</P>
